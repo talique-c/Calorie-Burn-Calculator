@@ -1,10 +1,25 @@
 /* LAYOUT */
+
+#lbsButton + label, #kgButton + label:focus {
+  border:#7c1f1a;
+}
+
+.btn-primary {
+  background-color:#FE5F55;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  
+}
+
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 50%;
+  background-color: white; 
+  border-radius: 8px; 
+  padding: 20px; 
 }
 
 .form-floating {
@@ -14,6 +29,7 @@
 .form-group {
   padding: 0.8em;
 }
+
 .btn-group {
   padding: 0.8em 0;
 }
@@ -21,13 +37,76 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #7A9E9F; 
 }
 
 /* TEXT */
 h1 {
   text-align: center;
+  color: white;
+}
+
+label {
+  color: #7A9E9F;
 }
 
 a {
-  color: #00B7FF;
+  color: #FE5F55;
 }
+.btn-primary {
+  background-color: #FE5F55;
+  border-color: #FE5F55;
+}
+
+.btn-primary:hover {
+  background-color: #D94A45;
+  border-color: #D94A45;
+}
+
+.btn-outline-primary {
+  color: #FE5F55;
+  border-color: #FE5F55;
+}
+
+.btn-outline-primary:hover {
+  background-color: #FE5F55;
+  color: white;
+}
+
+.form-control {
+  border-color: #7A9E9F; 
+}
+
+.form-control:focus {
+  border-color: #FE5F55; 
+  box-shadow: 0 0 5px rgba(254, 95, 85, 0.5); 
+}
+
+.form-select {
+  border-color: #7A9E9F; 
+}
+
+.form-select:focus {
+  border-color: #FE5F55; 
+  box-shadow: 0 0 5px rgba(254, 95, 85, 0.5); 
+}
+
+#lbsButton + label, #kgButton + label {
+  background-color:#7c1f1a;
+}
+
+/*
+#lbsButton + label, #kgButton + label:hover {
+  border:#7c1f1a;
+}*/
+
+#lbsButton + label, #kgButton + label:hover {
+  border:#7c1f1a;
+  outline: #7c1f1a;
+}
+
+#lbsButton + label, #kgButton + label:focus {
+  border:#7c1f1a;
+}
+
+
