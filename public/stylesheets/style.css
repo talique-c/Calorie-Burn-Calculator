@@ -1,6 +1,31 @@
+/* LAYOUT */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form-floating {
+  width: 25%;
+}
+
+.form-group {
+  padding: 0.8em;
+}
+.btn-group {
+  padding: 0.8em 0;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/* TEXT */
+h1 {
+  text-align: center;
 }
 
 a {
