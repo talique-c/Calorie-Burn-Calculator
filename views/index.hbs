@@ -2,9 +2,9 @@
 
 <body>
     <form class="form-container container">
-        <p>Please enter your sex:</p>
-        <br />
-        <div class="form-group">
+        <div class="form-group" id="maleOrFemale">
+            <label for="maleOrFemale">Please enter your sex:</label>
+            <br>
             <div class="form-check form-check-inline">
                 <input id="male" type="radio" class="form-check-input" name="sex" value="male" />
                 <label for="male" class="form-check-label">Male</label>
@@ -33,6 +33,7 @@
             <label class="btn btn-outline-primary" for="kgButton">Kilograms</label>
         </div>
 
+        <p>Please select your activity level:</p>
         <div class="form-floating">
             <select class="form-select" id="activityLevel" aria-label="Activity Level Selection Menu:">
                 <option selected>Choose Activity Level</option>
@@ -44,9 +45,11 @@
         </div>
 
         <div class="form-group">
-            <div class="input-group mb-3">
-                <input type="number" class="form-control" placeholder="Hours" aria-label="Hours">
-                <input type="number" class="form-control" placeholder="Minutes" aria-label="Minutes">
+            <label for="hoursAndMinsText">Duration:</label>
+            <div class="input-group mb-3" id="hoursAndMinsText">
+                <input type="text" class="form-control" placeholder="Hours" aria-label="Hours">
+                <input type="text" class="form-control" placeholder="Minutes" aria-label="Minutes">
+
             </div>
         </div>
 
