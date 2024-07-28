@@ -76,4 +76,7 @@ document.getElementById('calorieButton').addEventListener('click', function () {
     var caloriesBurnedTotal = caloriesBurnedInAMinute * minutes;
 
     caloriesBurnedTotalText.textContent = `You have burned ${caloriesBurnedTotal.toFixed(2)} calories! `;
+
+    //TODO: Add recommended calorie intake
+
 });
