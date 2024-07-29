@@ -1,17 +1,13 @@
 // Calculate total calories burned
-// function totalCaloriesBurned(met, weight, minutes) {
 export function totalCaloriesBurned(met, weight, minutes) {
+    if (met <= 0 || weight <= 0 || minutes <= 0) {
+        return 0;
+    }
+
     // Calculate calories burned per minute
-    const caloriesBurnedInAMinute = (met * weight * 3.5) / 200;
+    let caloriesBurnedInAMinute = (met * weight * 3.5) / 200;
     const calories = caloriesBurnedInAMinute * minutes;
-    console.log(met);
-    console.log(weight);
-    console.log(minutes);
-    console.log(calories);
-    return calories;
+    return Number(calories.toFixed(2));
 }
 
-// module.exports = totalCaloriesBurned;
 export default totalCaloriesBurned;
-// export { totalCaloriesBurned };
-// module.exports = totalCaloriesBurned;

@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* LAYOUT */
+* {
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+}
 
 /* Form */
 .form-container {
@@ -7,7 +13,9 @@
   align-items: center;
   flex-direction: column;
   width: 50%;
-  background-color: white; 
+  background-color: #FEE6C8;
+  border: #CA5833 8px ridge; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   border-radius: 8px; 
   padding: 20px; 
 }
@@ -28,35 +36,57 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #7A9E9F; 
+  background-image: url(../images/orange-bg23jpg.jpg); 
 }
 
-h1 {
+h1,
+h2,
+h3 {
+  font-family: "Anton SC", serif;
   text-align: center;
-  color: white;
+  color: black;
+  text-shadow: 2px 2px 0 #CA5833;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 label {
-  color: #7A9E9F;
+  color: #CA5833;
 }
 
 a {
   color: #FE5F55;
 }
 
+.activityText {
+  color: #CA5833;
+}
+
+.caloriesSpan {
+  color: FFA500;
+  font-weight: bold;
+  font-size: 45px;
+}
+
 /* Buttons and Form Inputs */
 #lbsButton + label {
-  color: #FE5F55;
-  border: #FE5F55 2px solid;
+  color: #FFA500;
+  border: #FFA500 2px solid;
 }
 
 #kgButton + label {
-  color: #7A9E9F;
-  border: #7A9E9F 2px solid;
+  color: #CA5833;
+  border: #CA5833 2px solid;
+}
+
+#calorieButton {
+  margin-bottom: 1em;
 }
 
 .form-control {
-  border-color: #7A9E9F; 
+  border-color: #CA5833; 
 }
 
 .form-control:focus {
@@ -65,7 +95,7 @@ a {
 }
 
 .form-select {
-  border-color: #7A9E9F; 
+  border-color: #CA5833; 
 }
 
 .form-select:focus {
@@ -75,24 +105,19 @@ a {
 
 /* Button Overrides */
 .btn-primary {
-  background-color:#FE5F55;
+  background-color:#FFA500;
   color: #FFFFFF;
   border-color: #FFFFFF;
 }
 
 .btn-primary {
-  background-color: #FE5F55;
-  border-color: #FE5F55;
+  background-color: #FFA500;
+  border-color: black;
 }
 
 .btn-primary:hover {
   background-color: #D94A45;
-  border-color: #D94A45;
-}
-
-.btn-outline-primary {
-  color: #FE5F55;
-  border-color: #FE5F55;
+  border-color: black;
 }
 
 .btn-outline-primary:hover {
@@ -101,8 +126,6 @@ a {
 }
 
 .btn-outline-primary {
-  --bs-btn-active-bg: #DAD9D8;
-  transition: 0.5s;
+  --bs-btn-active-bg: white;
+  transition: 0.8s;
 }
-
-

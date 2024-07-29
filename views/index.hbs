@@ -2,7 +2,7 @@
 
 <body>
     <form class="form-container container">
-        <div class="form-group" id="maleOrFemale">
+        {{!-- <div class="form-group" id="maleOrFemale">
             <label for="maleOrFemale">Please enter your sex:</label>
             <br>
             <div class="form-check form-check-inline">
@@ -13,13 +13,13 @@
                 <input id="female" type="radio" class="form-check-input" name="sex" value="female" />
                 <label for="female" class="form-check-label">Female</label>
             </div>
-        </div>
+        </div> --}}
 
-        <div class="form-group">
+        {{!-- <div class="form-group">
             <label for="age">Please enter your age:</label>
             <input id="age" type="number" class="form-control" required>
         </div>
-        <p id="ageValidation"></p>
+        <p id="ageValidation"></p> --}}
 
         <div class="form-group">
             <label for="weight">Please enter your weight:</label>
@@ -28,14 +28,15 @@
         <p id="weightValidation"></p>
 
         <div class="btn-group" role="group" aria-label="Weight Selection">
-            <input id="lbsButton" type="radio" class="btn-check" name="weight" checked>
+            <input id="kgButton" type="radio" class="btn-check" name="weight" checked>
+            <label class="btn btn-outline-primary" for="kgButton">Kilograms</label>
+            
+            <input id="lbsButton" type="radio" class="btn-check" name="weight">
             <label class="btn btn-outline-primary" for="lbsButton">Pounds</label>
 
-            <input id="kgButton" type="radio" class="btn-check" name="weight">
-            <label class="btn btn-outline-primary" for="kgButton">Kilograms</label>
         </div>
 
-        <p>Please select your activity level:</p>
+        <p class="activityText">Please select your activity level:</p>
         <div class="form-floating">
             <select class="form-select" id="activityLevel" aria-label="Activity Level Selection Menu:">
                 <option selected>Choose Activity Level</option>
