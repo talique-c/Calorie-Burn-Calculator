@@ -1,6 +1,9 @@
-// Button event listener
-document.getElementById('calorieButton').addEventListener('click', function () {
+import totalCaloriesBurned from './calculatorFunctions.js';
+// import { } from ./
 
+// Button event listener
+const calorieButton = document.getElementById('calorieButton');
+calorieButton.addEventListener('click', function () {
     // VARIABLES
     const sex = document.querySelector('input[name="sex"]:checked').value;
     let age = document.getElementById('age').value;
@@ -14,7 +17,6 @@ document.getElementById('calorieButton').addEventListener('click', function () {
     var weightValidation = document.getElementById('weightValidation');
     var minutesValidation = document.getElementById('minutesValidation');
 
-    
     // VALIDATION
     if (isNaN(age) || age <= 0 || age > 99) {
         ageValidation.style.color = "red";
@@ -66,17 +68,24 @@ document.getElementById('calorieButton').addEventListener('click', function () {
     console.log(met);
     console.log(weight);
     console.log(minutes);
-    
+
     /* Equations Source: https://www.healthline.com/health/fitness-exercise/how-many-calories-do-i-burn-a-day#faq */
 
-    // Calculate calories burned per minute
-    const caloriesBurnedInAMinute = (met * weight * 3.5) / 200;
+    // // Calculate total calories burned
+    // function totalCaloriesBurned(met, weight, minutes) {
+    //     // Calculate calories burned per minute
+    //     const caloriesBurnedInAMinute = (met * weight * 3.5) / 200;
+    //     const calories = caloriesBurnedInAMinute * minutes;
+    //     return calories;
+    // }
 
-    // Calculate total calories burned
-    var caloriesBurnedTotal = caloriesBurnedInAMinute * minutes;
 
-    caloriesBurnedTotalText.textContent = `You have burned ${caloriesBurnedTotal.toFixed(2)} calories! `;
+
+    let totalCalories = totalCaloriesBurned(met, weight, minutes);
+
+    caloriesBurnedTotalText.textContent = `You have burned ${totalCalories.toFixed(2)} calories! `;
 
     //TODO: Add recommended calorie intake
 
 });
+export default { totalCaloriesBurned };
